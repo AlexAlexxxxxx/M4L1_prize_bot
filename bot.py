@@ -21,6 +21,10 @@ def callback_query(call):
     prize_id = call.data
     user_id = call.message.chat.id
 
+    img = manager.get_prize_img(prize_id)
+    with open(f'img/{img}', 'rb') as photo:
+        bot.send_photo(user_id, photo)
+
 
 def send_message():
     for user in manager.get_users():
