@@ -75,7 +75,6 @@ def polling_thread():
     bot.polling(none_stop=True)
 
 if __name__ == '__main__':
-    # Перед запуском создай папку hidden_img
     manager = DatabaseManager(DATABASE)
     manager.create_tables()
 
