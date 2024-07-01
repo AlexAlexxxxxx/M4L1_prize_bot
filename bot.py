@@ -21,7 +21,7 @@ def callback_query(call):
     prize_id = call.data
     user_id = call.message.chat.id
 
-    if manager.get_winners_count(prize_id) < 3:
+    if manager.get_winners_count(prize_id) < 1:
         res = manager.add_winner(user_id, prize_id)
         if res:
             img = manager.get_prize_img(prize_id)
